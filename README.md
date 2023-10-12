@@ -2,6 +2,30 @@
 
 The Graph demo shows how to use the PowerBuilder WebBrowser control to render the third-party visual charts which are exposed as JavaScript classes. It mainly demonstrates how to execute JavaScripts in the PowerBuilder application to dynamically adjust data display in different chart styles; and connect the chart event with the WebBrowser event so that JavaScript and PowerScript can interact with each other.
 
+### Sample Project Structure
+
+The project is structured as follows.
+
+```
+|—— PowerBuilder-Graph-Example-WebView2 Repository 
+	|—— ECharts demo	Echarts Source Code			
+    	|—— GoogleCharts demo	Google Charts Source Code			
+```
+### Setting Up the Project
+
+Download this PowerBuilder demo application, and then:
+
+1. Open the PowerBuilder project in PowerBuilder 2022 R2.
+2. If you already had the corresponding database driver installed on the machine when you installed PowerBuilder 2022 R2 and selected Database Provider, you can just skip step#3 and step#4 below to run the PowerBuilder project directly. Otherwise, please follow the steps below to create the ODBC data source. 
+3. Download the database file <b>pbdemo2021_for_sqlanywhere.zip</b> from [PowerBuilder-Project-Example-Database](https://github.com/Appeon/PowerBuilder-Project-Example-Database).  
+4. Use the downloaded database file to create a new ODBC data source referring to the below must-configure connection settings:
+   ```
+   Data source name: 	PB Demo DB V2022R2	//Must be the same as the Data source name specified in the code.
+   User ID: 		dba
+   Password: 		sql
+   ```
+5. Run the PowerBuilder project.
+
 ## General steps to apply a chart (exposed as JavaScript classes)
 
 Step 1: Create an HTML page which contains the following:
@@ -220,5 +244,3 @@ The demo application contains default PowerClient and PowerServer projects. Plea
 - Database Configuration in the Web APIs tab 
 
   If you use SQL Anywhere as the demo database, no change is needed to the database configuration. 
-
-  If you use PostgreSQL as the demo database, the default login account is postgres (user)/postgres (password). Please double check the connection. 
